@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Clock</title>
+    <style>
+        #clock {
+            font-size: 48px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 200px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        setInterval(updateClock, 1000);
+    </script>
+</head>
+<body>
+    <div id="clock"></div>
+</body>
+</html>
